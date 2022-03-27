@@ -1,0 +1,16 @@
+{
+  "name": "healbot",
+  "version": "1.0.0",
+  "description": "Discord bot for HEAL Clinical Education Network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joe Huynh",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0"
+  }
+}
