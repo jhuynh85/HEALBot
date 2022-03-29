@@ -2,7 +2,6 @@ require("dotenv").config(); //initialize dotenv
 
 const { Client, Intents } = require("discord.js");
 const axios = require("axios");
-const MEMBERS = require("./members.json");
 
 const client = new Client({
 	intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS],
@@ -25,11 +24,6 @@ client.on("messageCreate", async (message) => {
 
 	if (command === "ping") {
 		message.reply("Pong!");
-	}
-
-	if (command === "getList") {
-		// message.reply(MEMBERS.emails);
-		console.log(MEMBERS.emails);
 	}
 
 	/**
