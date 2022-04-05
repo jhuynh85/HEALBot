@@ -27,13 +27,13 @@ client.on("messageCreate", async (message) => {
 	}
 
 	/**
-	 *	Command: !member add/remove "username#1234"
+	 *  Command: !member add/remove "username#1234"
 	 *  Description: Adds or removes the Membership+ role to the user with the
 	 *  given Discord user tag.
 	 */
 	if (command === "member") {
-		// Check format of user tag format
-		const userName = message.content.match(/"([a-zA-Z]+\s?[a-zA-Z]*#\d{4})"/);
+		// Check format of user tag
+		const userName = message.content.match(/"(.{3,32}#[0-9]{4})"/);
 
 		if (userName && userName[1]) {
 			// Look up username
